@@ -1,26 +1,13 @@
 import { CapacitorSQLite, SQLiteConnection, SQLiteDBConnection } from '@capacitor-community/sqlite';
-import { defineCustomElements as jeepSqlite, applyPolyfills, JSX as LocalJSX  } from "jeep-sqlite/loader";
+import { defineCustomElements as jeepSqlite, applyPolyfills  } from "jeep-sqlite/loader";
 import jsonData from "../db/import-db";
 import { Capacitor } from '@capacitor/core';
-import { HTMLAttributes } from 'react';
-
-type StencilToReact<T> = {
-  [P in keyof T]?: T[P] & Omit<HTMLAttributes<Element>, 'className'> & {
-    class?: string;
-  };
-} ;
-
-declare global {
-  export namespace JSX {
-    interface IntrinsicElements extends StencilToReact<LocalJSX.IntrinsicElements> {
-    }
-  }
-}
 
 applyPolyfills().then( async () => {
   await jeepSqlite(window);
 });
 
+/** SQLite DB Singleton */
 var DbConnection = function () {
   var db: any = null;
   var instance: number = 0;

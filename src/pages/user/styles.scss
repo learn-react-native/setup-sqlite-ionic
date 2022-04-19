@@ -1,0 +1,63 @@
+.user-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .list-user {
+    li {
+      list-style-type: none;
+      font-size: 22px;
+    }
+  }
+}
+
+.content {
+  height: 400px;
+  overflow: scroll;
+}
+
+.heading {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.user-item {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  font-size: 25px;
+  border: 1px solid #000;
+}
+
+.user-id {
+  margin-bottom: 10px;
+}
+
+.user-name {
+  margin-bottom: 10px;
+}
+
+// User Detail
+.user-detail-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .heading {
+    font-size: 40px;
+  }
+}
+
+.btn {
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+}
